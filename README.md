@@ -1,6 +1,6 @@
 # Alpha Social Media App
 
-## Getting Started
+
 
 First, run the development server:
 
