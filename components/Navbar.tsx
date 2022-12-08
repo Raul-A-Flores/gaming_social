@@ -6,7 +6,7 @@ import { FiLogOut } from 'react-icons/fi';
 import {BiSearch} from 'react-icons/bi';
 import {IoMdAdd} from 'react-icons/io'
 import { GoogleLogin, googleLogout } from '@react-oauth/google';
-import Logo from '../utils/Dodo_logo.png'
+import Logo from '../utils/logo.png'
 import { createOrGetUser } from '../utils';
 import useAuthStore from '../store/authStore';
 
@@ -28,13 +28,13 @@ const Navbar = () => {
   return (
     <div className='w-full flex justify-between items-center bg-navbar py-2'>
       <Link href='/'>
-        <div className='w-[100px] md:w-[120px] '>
-          {/* <Image 
-            className='cursor-pointer'
+        <div className='w-[120px] md:w-[120px] '>
+           <Image 
+            className='cursor-pointer h:90px p-2'
             src={Logo}
-            alt='dodo_logo'
+            alt='logo'
             layout='responsive'
-          /> */}
+          /> 
           
         </div>
       </Link>

@@ -30,19 +30,6 @@ const Detail  = ({postDetails} : IProps) => {
   const [isPosting, setIsPosting] = useState(false);
 
 
-
-  const onVideoClick =()=>{
-    if(playing){
-      videoRef?.current?.pause();
-      setPlaying(false);
-
-
-    }else{
-      videoRef?.current?.play();
-      setPlaying(true);
-    }
-  }
-
   useEffect(() => {
     if (post && videoRef?.current){
       videoRef.current.muted = isVideoMuted;
@@ -80,7 +67,7 @@ const Detail  = ({postDetails} : IProps) => {
   if(!post) return null;
 
   return (
-   <div className='flex w-full absolute left-0 top-0 bg-primary flex-wrap lg:flex-nowrap'>
+   <div className='flex w-full absolute left-0 top-0 bg-primary flex-wrap lg:flex-nowrap pr-10'>
     <div className='relative flex-2 w-[1000px] lg:w-9/12 flex justify-center items-center bg-center bg-black-600 overflow-hidden'>
       <div className='absolute top-6 left-2 lg:left-6 gap-6 flex z-50'>
         <p className='cursor-pointer' onClick={() => router.back()}>
@@ -89,7 +76,7 @@ const Detail  = ({postDetails} : IProps) => {
 
       </div>
       <div className='relative'>
-        <div className='lg:h-[100vh] h-[60vh] object-fit m-20 '>
+        <div className='lg:h-[100vh] h-[60vh] object-fit  '>
           <img
             src={post.video.asset.url}
             className='flex flex-center pt-10 cursor-pointer '
@@ -120,7 +107,7 @@ const Detail  = ({postDetails} : IProps) => {
             </div>
             <Link href='/'>
               <div className='flex items-center gap-2'>
-                <p className='flex gap-2 itesm-center md:text-md font-bold text-white'>{post.postedBy.userName}</p>
+                <p className='flex gap-2 md:text-md font-bold text-white'>{post.postedBy.userName}</p>
                 { ` `}
                 <GoVerified className='text-blue-400 text-md' />
                 <p className='capitalize font-medium text-xs text-white hidden md:block'>{post.postedBy.userName}</p>

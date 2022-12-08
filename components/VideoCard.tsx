@@ -16,42 +16,16 @@ interface IProps{
 
 
 const VideoCard: NextPage<IProps> = ({ post }) => {
-  
-  const [isHover, setIsHover] = useState(false);
-  const [playing, setPlaying] = useState(false);
-  const [isVideoMuted, setIsVideoMuted] = useState(false);
-  const VideoRef = useRef<HTMLVideoElement>(null);
-
-  const onVideoPres = ()=>{
-    if(playing){
-      VideoRef?.current?.pause();
-      setPlaying(false);
 
 
-    }else{
-      VideoRef?.current?.play();
-      setPlaying(true);
-    }
-  }
-  useEffect(() => {
-    if (VideoRef?.current){
-      VideoRef.current.muted = isVideoMuted;
-      console.log(post.video)
-      console.log(post.video.asset , " ASSSETSSSS")
-    }
   
-    },
-   [isVideoMuted])
-  
-  
-  console.log(post.caption)
+  // console.log(post.caption)
   return (
     <div className='flex flex-col border-b-2 border-gray-200 pb-6'>
       <div>
         <div className='flex gap-3 p-2 cursor-pointer font-semibold rounded '>
           <div className='md:w-16 md:h-16 w-10 h-10'>
             <Link href={`/profile/${post.postedBy._id}`}>
-              <>
                 <Image 
                   width={62}
                   height={62}
@@ -60,13 +34,12 @@ const VideoCard: NextPage<IProps> = ({ post }) => {
                   alt='profile'
                   layout='responsive'
                 />
-              </>
             </Link>
 
           </div>
           <Link href={`/profile/${post.postedBy._id}`}>
             <div className='flex items-center gap-2'>
-              <p className='flex gap-2 items-center md:text-md font-bold text-primary'>{post.postedBy.userName}</p>
+              <p className='flex gap-2 items-center md:text-md font-bold text-white'>{post.postedBy.userName}</p>
               { ` `}
               <GoVerified className='text-blue-400 text-md' />
               <p className='capitalize font-medium text-xs text-white hidden md:block'>{post.postedBy.userName}</p>
@@ -75,17 +48,13 @@ const VideoCard: NextPage<IProps> = ({ post }) => {
 
         </div>
       </div>
-      <div className='lg:ml-20 flex gap-4 relative items-center'>
-        <div className='rounded-3xl'
-              onMouseEnter={() =>setIsHover(true)}
-              onMouseLeave={()=>setIsHover(false)}
-              >
+      <div className='lg:ml-20 flex gap-4 relative px-5 items-center '>
+        <div className='rounded-3xl' >
           <Link href={`/detail/${post._id}`}>
             <img
               src={post.video.asset.url}
-              className='lg: h-[250px] md:h-[300px] lg:h-[430px] rounded-2xl items-center cursor-pointer bg-gray-100 object-fit'
-            />
-          
+              className='md:h-[300px] sm:h-[300px] xs:h-[220px] rounded object-contain lg:h-[400px] cursor-pointer bg-primary  '
+            />    
           </Link>
         </div>
 

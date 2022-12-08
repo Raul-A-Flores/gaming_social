@@ -33,7 +33,7 @@ const Profile =({ data } : IProps) =>{
 
 
     return (
-        <div className='w-full'>
+        <div className='w-full pr-10'>
             <div className='flex gap-6 md:gap-10 mb-4 bg-primary text-white'>
             <div className='w-16 h-16 md:w-32 md:h-32 text-white'>
                 <Image 
@@ -48,9 +48,8 @@ const Profile =({ data } : IProps) =>{
 
               </div>
               <div className='flex flex-col justify-center'>
-                <p className=' md:text-2xl tracking-wider  text-white flex gap-1 items-center text-md font-bold text-primary-lowercase'>{user.userName.replaceAll(' ', '')}
+                <p className='md:text-2xl tracking-wider text-white flex gap-1 items-center text-md font-bold text-primary-lowercase'>{user.userName.replaceAll(' ', '')}
                     <GoVerified className='text-blue-400' />
-
                 </p>
                 <p className='capitalize text-white text-xs md:text-xl justify-center'>
                   {user.userName}
