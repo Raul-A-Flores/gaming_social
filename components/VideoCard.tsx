@@ -50,12 +50,15 @@ const VideoCard: NextPage<IProps> = ({ post }) => {
       </div>
       <div className='lg:ml-20 flex gap-4 relative px-5 items-center '>
         <div className='rounded-3xl' >
+        <p className='text-white mb-6'>{post.caption}</p>
           <Link href={`/detail/${post._id}`}>
+            
             <img
               src={post.video.asset.url}
               className='md:h-[300px] sm:h-[300px] xs:h-[220px] rounded object-contain lg:h-[400px] cursor-pointer bg-primary  '
             />    
           </Link>
+          
         </div>
 
       </div>

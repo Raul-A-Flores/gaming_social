@@ -19,7 +19,7 @@ const Discover = () => {
   return (
     <div className='xl:border-b-2 xl:border-gray-700 pb-6'>
       <p className='text-white font-semibold m-3 mt-4 hidden xl:block'>
-        Popular Topics
+        Popular Games
       </p>
       
       <div className='flex gap-3 flex-wrap'>

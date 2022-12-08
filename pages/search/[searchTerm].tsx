@@ -22,7 +22,7 @@ const Search = ({ videos} : {videos: Video[]}) => {
 
     const accounts = isAccounts ? 'border-b-2 border-black' : 'text-white'
     const isVideos = !isAccounts ? 'border-b-2 border-black' : 'text-white';
-    console.log(videos)
+    // console.log(videos)
     return ( 
         <div className='w-full  '>
         <div className='flex gap-10 mb-10 border-b-2 border-gray-700 md:fixed z-50 bg-primary w-full'>

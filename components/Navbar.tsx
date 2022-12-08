@@ -28,9 +28,9 @@ const Navbar = () => {
   return (
     <div className='w-full flex justify-between items-center bg-navbar py-2'>
       <Link href='/'>
-        <div className='w-[120px] md:w-[120px] '>
+        <div className='w-[150px] md:w-[120px] '>
            <Image 
-            className='cursor-pointer h:90px p-2'
+            className='cursor-pointer'
             src={Logo}
             alt='logo'
             layout='responsive'
@@ -94,15 +94,15 @@ const Navbar = () => {
             </div>
 
           ):(
-            <GoogleLogin
-          
-              onSuccess={(response) => 
-              createOrGetUser(response, addUser)   
-              }
-              onError={()=> console.log('Error')}    
-                 
-                />
-          )
+            <div className='pr-5'>
+              <GoogleLogin
+                onSuccess={(response) => 
+                createOrGetUser(response, addUser)   
+                }
+                onError={()=> console.log('Error')}    
+                  />
+            </div>
+            )
         }
       </div>
     </div>
