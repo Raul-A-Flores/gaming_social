@@ -1,4 +1,4 @@
-
+# Alpha Social Media App
 
 ## Getting Started
 
