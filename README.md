@@ -2,6 +2,9 @@
 
 Early stages of a gaming social media application centered around gamers. Topics include popular gaming titles with future plans of other integrations. Application was built using Typescript, 
 
+![](assets/Screen%20Shot%202022-12-20%20at%2010.45.11%20AM.png)
+![](assets/Screen%20Shot%202022-12-20%20at%2010.45.36%20AM.png)
+
 ## Getting Started
 
 To get started download or clone repository.
@@ -49,3 +52,4 @@ Run Sanity CLI
 sanity start
 ```
 Click on the link provided on the terminal to access your schema. Navigate to manage your project and copy your API for the env files. Copy the project id as well and replace in utils/client.ts. 
+.
